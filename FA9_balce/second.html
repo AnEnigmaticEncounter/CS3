@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<button onclick="imageA()">Pink Sky</button>
+		<button onclick="imageB()">Sage</button>
+		<h1> </h1>
+		<div>
+			<img src="first_image.jpeg" alt="Sage from Sonic Frontiers" style="width:640px;height:360px;" id="images">
+		</div>
+			<script>
+				function imageA() {
+					document.getElementById("images").src="second_image.jpg";
+				}
+
+				function imageB() {
+					document.getElementById("images").src="first_image.jpeg";
+				}
+			</script>
+	</body>
+</html>
