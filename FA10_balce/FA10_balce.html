@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> hi how r u? </title>
+	</head>
+	<body>
+		<h2 id="rng"> </h2>
+		<h1 id="bre"> </h1>
+		<script>
+			var num = Math.floor(Math.random() * 1000);
+			var hundreds;
+			var tens;
+			var ones;
+			document.getElementById("rng").innerHTML = "Randomly generated number: " + num;
+			var notnum = num.toString();
+			if (num < 10) {
+				hundreds = "0";
+				tens = "0";
+				ones = notnum[0];
+			} else if (num < 100) {
+				hundreds = "0";
+				tens = notnum[0];
+				ones = notnum[1];
+			} else {
+				hundreds = notnum[0];
+				tens = notnum[1];
+				ones = notnum[2];
+			}
+			document.getElementById("bre").innerHTML = "Breakdown: " + hundreds + "00, " + tens + "0, " + ones;
+		</script>
+	</body>
+</html>
