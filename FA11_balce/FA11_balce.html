@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> who's that pokemon </title>
+	</head>
+	<body>
+	<p id="inputs" style="color: grey"> </p>
+	<h1 id="triangle"> </h1>
+		<script>
+			var first = prompt("Enter the first number: ", "triangle side 1 btw");
+			var second = prompt("Enter the second number: ", "now its side 2");
+			var third = prompt("Enter the third number: ", "side 3 now omg");
+
+			document.getElementById("inputs").innerHTML = "Inputs: " + first + " " + second + " " + third;
+			if (first == second && second == third) {
+				document.getElementById("triangle").innerHTML = "The triangle is EQUILATERAL.";	
+			} else if (first == second || second == third || third == first) {
+				document.getElementById("triangle").innerHTML = "The triangle is ISOSCELES.";	
+			} else {
+				document.getElementById("triangle").innerHTML = "The triangle is SCALENE.";	
+			}
+		</script>
+	</body>
+</html>
