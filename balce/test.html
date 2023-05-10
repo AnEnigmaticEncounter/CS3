@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+		<body>
+			<form> [Enter a number between 2 and 10] <br>
+				<input type="number" min="2" max="10" id="row"> by <input type="number" min="2" max="10" id="column"> <br> <br>
+				<input type="button" onclick="table()" value="Click here when ready!"> 
+			</form>
+			<div id="table"> </div>
+				
+			<script>
+				function table() {
+					var row = parseInt(document.getElementById("row").value);
+					var row2 = 1;
+					var column = parseInt(document.getElementById("column").value);
+					var column4 = parseInt(document.getElementById("column").value);
+					var column2 = 1;
+					var column3 = 1;
+					var tabletest = "<table>";
+						while (row2 <= row) {
+							tabletest = tabletest + "<tr>";
+							while (column2 <= column) {
+								tabletest = tabletest + "<td>" + column2 + "</td>";
+								column2 = column2 + column3;
+							}
+							tabletest = tabletest + "</tr>";
+							row2++;
+							column = column + column4;
+							column2 = row2;
+							column3 = row2;
+						}
+				
+					tabletest = tabletest + "</table>";
+					document.getElementById("table").innerHTML = tabletest;
+				}
+			</script>
+		</body>
+	</html>
